@@ -3,7 +3,7 @@
 /**
  * author: Vladimir
  * created: 9.11.2016
- * modified: 9.11.2016
+ * modified: 13.11.2016
  *
  * This is the main .js file in web application
  */
