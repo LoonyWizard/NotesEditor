@@ -1,0 +1,50 @@
+@header-bg: #0b7285;
+.header {
+	.container {
+		max-width: 700px;
+	}
+	@media (max-width: 780px) {
+	  	.container {
+	    	width: 100%;
+	  	}
+	}
+	text-align: center;
+	.my-btn {
+		font-weight: 400;
+		text-decoration: none;
+		display: inline-block;
+		margin: 17px auto 10px auto;
+		border-radius: 8px;
+		padding: 5px 25px;
+		color: white;
+		font-size: 1.25rem;
+		border: 1px solid white;
+		transition: all 0.3s ease;
+		&:hover {
+			cursor: pointer;
+			color: @header-bg;
+			background: white;
+		}
+	}
+	input {
+		outline: none;
+		-webkit-box-shadow: none !important;
+		-moz-box-shadow: none !important;
+		box-shadow: none !important;
+
+		width: 100%;
+		margin: 8px 10px;
+		padding: 5px 10px;
+		color: #444;
+		font-weight: 300;
+		background: #f8f9fa;
+		border: 8px solid #dee2e6;
+		transition: all 0.3s ease;
+		box-shadow: none;
+		font-size: 1.4rem;
+		&:focus {
+			border: 8px solid #22b8cf;
+		}
+	}
+	background: @header-bg;
+}

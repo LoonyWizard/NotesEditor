@@ -11,7 +11,7 @@
 function searchTags(string) {
 
 	let tags = [];
-	let regexp = /[!,\.;\(\)\[\]{} ]/gi; 
+	let regexp = /[!,\.;\(\)\[\]{}\n\r\t ]/gi; 
 
  	let set = new Set(string.split(regexp));
  	

@@ -37,10 +37,13 @@ class Note {
 		deleteNoteWrapper.appendChild(deleteNoteImage);
 		div.appendChild(deleteNoteWrapper);
 
-		let inputDiv = document.createElement('div');
-		inputDiv.className = 'input';
-		inputDiv.setAttribute('contenteditable', 'true');
-		div.appendChild(inputDiv);
+		let textarea = document.createElement('textarea');
+		textarea.className = 'input';
+		div.appendChild(textarea);
+		// let inputDiv = document.createElement('div');
+		// inputDiv.className = 'input';
+		// inputDiv.setAttribute('contenteditable', 'true');
+		// div.appendChild(inputDiv);
 
 		let tagsDiv = document.createElement('div');
 		tagsDiv.className = 'tags';
@@ -79,6 +82,7 @@ class Note {
 			let tmp = document.createElement('div');
 			tmp.innerHTML = data['div'];
 			let div = tmp.firstChild;
+			div.getElementsByClassName('input')[0].value = data['note'];
 			let tags = JSON.parse(data['tags']);
 
 			let note = new Note(div, tags);
@@ -129,7 +133,7 @@ Note.prototype.setHandlers = function() {
 
 			// parse text and find all tags
 			let input = this.div.getElementsByClassName('input')[0];
-			let tags = searchTags(input.innerHTML);
+			let tags = searchTags(input.value);
 			resolve(tags);
 
 		})
@@ -181,6 +185,7 @@ Note.prototype.saveToLocalStorage = function() {
 
 	let data = {};
 	data['div'] = this.div.outerHTML;
+	data['note'] = this.div.getElementsByClassName('input')[0].value;
 	data['tags'] = JSON.stringify(this.tags);
 	let json = JSON.stringify(data);
 	localStorage.setItem(this.div.id, json);

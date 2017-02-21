@@ -1,6 +1,6 @@
 # NotesEditor
+
 Небольшой редактор заметок с возможностью добавления тегов к заметкам. Возможен поиск заметок по тегам.
+Адаптивная вёрстка с сеткой Bootstrap 4 и CSS препроцессором LESS, отображается нормально даже на разрешении 320px
 
-## website: https://loonywizard.github.io/NotesEditor/
-
-код на продакшне переведён в старый стандарт с помощью Babel, оригинальный код храниться в этом репозитории, переведённый - в https://github.com/LoonyWizard/loonywizard.github.io/tree/master/NotesEditor
+## [https://loonywizard.github.io/notes-editor/](https://loonywizard.github.io/notes-editor/) 
